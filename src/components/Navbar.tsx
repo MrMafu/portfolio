@@ -16,7 +16,6 @@ const navItems = [
 
 export default function Navbar() {
     const [activeSection, setActiveSection] = useState("home");
-    const [scrolling, setScrolling] = useState(false);
 
     useEffect(() => {
         const handleScroll = () => {
@@ -45,8 +44,6 @@ export default function Navbar() {
             if (currentSection && currentSection.id !== activeSection) {
                 setActiveSection(currentSection.id);
             }
-
-            setScrolling(true);
         };
 
         handleScroll();

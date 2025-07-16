@@ -3,8 +3,8 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGithub, faInstagram, faLinkedin, faXTwitter } from "@fortawesome/free-brands-svg-icons";
 
 export default function Footer() {
-    let date = new Date();
-    let year = date.getFullYear();
+    const date = new Date();
+    const year = date.getFullYear();
 
     return (
         <footer className="flex flex-col items-center py-2 bg-blue-400 text-white gap-3 md:flex-row md:justify-around md:gap-4">
