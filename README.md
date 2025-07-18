@@ -1,36 +1,81 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# MrMafu's Portfolio Website
+[![Next.js](https://img.shields.io/badge/Next.js-v15+-black?logo=next.js)](https://nextjs.org)
+[![React.js](https://img.shields.io/badge/React-v19+-61DAFB?logo=react)](https://react.dev)
+[![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-v4+-06B6D4?logo=tailwindcss)](https://tailwindcss.com)
 
-## Getting Started
+My personal portfolio website built with Next.js, featuring responsive design and dark/light themes.
+<br>
+🔴 Visit the live demo [here](https://mrmafu-portfolio.vercel.app).
 
-First, run the development server:
+## 🛠 Technologies
+### Core Stack
+- [Next.js](https://nextjs.org)
+- [React](https://react.dev)
+- [Tailwind CSS](https://tailwindcss.com)
+- [TypeScript](https://www.typescriptlang.org)
 
+### Packages
+- [`@fortawesome`](https://fontawesome.com)
+- [`typewriter-effect`](https://www.npmjs.com/package/typewriter-effect)
+- [`formspree/react`](https://formspree.io)
+
+## ✨ Features
+
+- **Dynamic Theme Toggle**  
+  Seamless ☀️ light / 🌙 dark mode switching with system preference detection.
+- **Fully Responsive Design**  
+  Mobile-first layout optimized for all screen sizes.
+- **Interactive Elements**  
+  Animated typewriter effects and smooth transitions.
+- **Modern Development**  
+  Built with Next.js App Router and powered by Turbopack for lightning-fast build times and efficient development.
+
+## 🚀 Getting Started
+### Prerequisites
+- Node.js 22.x+
+- npm 11.x+
+
+### Installation
+1. Clone the repository:
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+git clone https://github.com/MrMafu/portfolio.git
+cd portfolio
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+2. Install dependencies:
+```bash
+npm install
+```
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### Development
+Start the development server:
+```bash
+npm run dev
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Open http://localhost:3000 in your browser to see the result.
 
-## Learn More
+### Project Structure
+You can start modifying this project within `src/` and `public/` (for image assets).
+<br>
+- `src/app/page.tsx`: The main page.
+- `src/components` : Contains reusable components used for the main page.
 
-To learn more about Next.js, take a look at the following resources:
+### [Formspree](https://formspree.io) Configuration
+This project's contact form utilizes [Formspree](https://formspree.io). To enable this feature for yourself, you'll need to:
+1. Sign in a new account at [Formspree](https://formspree.io).
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+2. Create a new form and copy the form endpoint.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+3. Update `/components/Contacts.tsx` in `line:11`:
 
-## Deploy on Vercel
+```bash
+const[state, handleSubmit, reset] = useForm("mrblznjd"); // Formspree form endpoint, change this to your own form endpoint.
+```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+```bash
+# Replace the existing endpoint "mrblznjd" with your new one:
+const[state, handleSubmit, reset] = useForm("your-new-form-endpoint-here");
+```
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+A full in-depth guide can be found directly in their page [here](https://help.formspree.io).

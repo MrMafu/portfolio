@@ -8,7 +8,7 @@ import { faAt, faCircleUser, faComment, faEnvelope, faPaperPlane } from "@fortaw
 import { faDiscord, faGithub, faInstagram, faLinkedin, faXTwitter } from "@fortawesome/free-brands-svg-icons";
 
 export default function Contacts({ id }: { id: string }) {
-    const [state, handleSubmit, reset] = useForm("mrblznjd");
+    const [state, handleSubmit, reset] = useForm("mrblznjd"); // Formspree form endpoint, change this to your own form endpoint.
 
     return (
         <div id={id} className="min-h-screen flex flex-col items-center justify-center px-4 py-8 scroll-mt-16">
